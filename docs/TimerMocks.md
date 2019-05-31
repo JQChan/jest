@@ -3,7 +3,7 @@ id: timer-mocks
 title: Timer Mocks
 ---
 
-The native timer functions (i.e., `setTimeout`, `setInterval`, `clearTimeout`, `clearInterval`) are less than ideal for a testing environment since they depend on real time to elapse. Jest can swap out timers with functions that allow you to control the passage of time. [Great Scott!](https://www.youtube.com/watch?v=5gVv10J4nio)
+The native timer functions (i.e., `setTimeout`, `setInterval`, `clearTimeout`, `clearInterval`) are less than ideal for a testing environment since they depend on real time to elapse. Jest can swap out timers with functions that allow you to control the passage of time. [Great Scott!](https://www.youtube.com/watch?v=QZoJ2Pt27BY)
 
 ```javascript
 // timerGame.js
@@ -12,7 +12,7 @@ The native timer functions (i.e., `setTimeout`, `setInterval`, `clearTimeout`, `
 function timerGame(callback) {
   console.log('Ready....go!');
   setTimeout(() => {
-    console.log('Times up -- stop!');
+    console.log("Time's up -- stop!");
     callback && callback();
   }, 1000);
 }
@@ -72,7 +72,7 @@ function infiniteTimerGame(callback) {
   console.log('Ready....go!');
 
   setTimeout(() => {
-    console.log('Times up! 10 seconds before the next game starts...');
+    console.log("Time's up! 10 seconds before the next game starts...");
     callback && callback();
 
     // Schedule the next game in 10 seconds
@@ -131,7 +131,7 @@ Another possibility is use `jest.advanceTimersByTime(msToRun)`. When this API is
 function timerGame(callback) {
   console.log('Ready....go!');
   setTimeout(() => {
-    console.log('Times up -- stop!');
+    console.log("Time's up -- stop!");
     callback && callback();
   }, 1000);
 }
